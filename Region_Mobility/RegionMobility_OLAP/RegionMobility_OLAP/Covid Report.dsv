@@ -1,0 +1,171 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="70324687-eebf-4f08-a4d0-8e0021771e4d" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Covid Report</ID>
+  <Name>Covid Report</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Covid Report</DataSourceID>
+  <Schema>
+    <xs:schema id="Covid_x0020_Report" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Covid_x0020_Report" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="d5ad3937-5312-41f6-a83d-1bf09ef1cbfd">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Dim_Date" msprop:design-time-name="72c6681c-4fa5-4f21-9b9a-ea3291006ce0" msprop:DbTableName="Dim_Date" msprop:FriendlyName="Dim_Date" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="DateKey" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="0f2b9e1c-0c79-4cd0-9afb-80edc1486ffc" msprop:DbColumnName="DateKey" msprop:FriendlyName="DateKey" type="xs:int" />
+                  <xs:element name="Date" msprop:design-time-name="e47c0aad-efe2-41ef-be20-18a35572c41c" msprop:DbColumnName="Date" msprop:FriendlyName="Date" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Year" msprop:design-time-name="356a6689-47f5-41c1-9b9f-74c10fbbbe5a" msprop:DbColumnName="Year" msprop:FriendlyName="Year" type="xs:int" minOccurs="0" />
+                  <xs:element name="Quarter" msprop:design-time-name="189c3a7a-821e-4588-9933-7e2bc1ecbbcb" msprop:DbColumnName="Quarter" msprop:FriendlyName="Quarter" type="xs:int" minOccurs="0" />
+                  <xs:element name="Month" msprop:design-time-name="e8592fa0-1f92-45a2-bf78-4af2697390c8" msprop:DbColumnName="Month" msprop:FriendlyName="Month" type="xs:int" minOccurs="0" />
+                  <xs:element name="Week" msprop:design-time-name="8ffa222e-ed67-4872-a2b2-2c0a9004877b" msprop:DbColumnName="Week" msprop:FriendlyName="Week" type="xs:int" minOccurs="0" />
+                  <xs:element name="DayOfWeek" msprop:design-time-name="37c0fa38-98de-4cac-9fb6-152bdd7b6e24" msprop:DbColumnName="DayOfWeek" msprop:FriendlyName="DayOfWeek" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Location" msprop:design-time-name="545fcd43-5f78-4029-b1b5-3fd20e3a8204" msprop:DbTableName="Dim_Location" msprop:FriendlyName="Dim_Location" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="LocationKey" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="7dd002ca-ba78-4a16-8d3d-b3841c23486c" msprop:DbColumnName="LocationKey" msprop:FriendlyName="LocationKey" type="xs:int" />
+                  <xs:element name="CountryRegionCode" msprop:design-time-name="4db37a69-c3ee-4908-ac15-6b677867ca67" msprop:DbColumnName="CountryRegionCode" msprop:FriendlyName="CountryRegionCode" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CountryRegion" msprop:design-time-name="1fe88c1f-81b2-4aa3-b4b1-8ef77d9d7be4" msprop:DbColumnName="CountryRegion" msprop:FriendlyName="CountryRegion" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SubRegion1" msprop:design-time-name="3a16f5f3-ddd6-4afe-9da9-a0da9e99a344" msprop:DbColumnName="SubRegion1" msprop:FriendlyName="SubRegion1" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SubRegion2" msprop:design-time-name="c70f6bdf-18e1-4324-96a1-fe3e19c1af15" msprop:DbColumnName="SubRegion2" msprop:FriendlyName="SubRegion2" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MetroArea" msprop:design-time-name="98e55153-6c86-4f7c-ab4c-de58aac5c4e9" msprop:DbColumnName="MetroArea" msprop:FriendlyName="MetroArea" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ISO3166_2Code" msprop:design-time-name="4faba5ee-a159-449c-9023-2b1cc5865f66" msprop:DbColumnName="ISO3166_2Code" msprop:FriendlyName="ISO3166_2Code" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CensusFipsCode" msprop:design-time-name="36c38fd3-0da1-4f9e-a4b6-085fb249cc57" msprop:DbColumnName="CensusFipsCode" msprop:FriendlyName="CensusFipsCode" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PlaceID" msprop:design-time-name="d2dd91da-1f49-47f6-a28d-eaac909385ee" msprop:DbColumnName="PlaceID" msprop:FriendlyName="PlaceID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Fact_Mobility" msprop:design-time-name="c4618c41-cab5-49cf-98e5-f3250af6d6b1" msprop:DbTableName="Fact_Mobility" msprop:FriendlyName="Fact_Mobility" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="MobilityID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="5107a849-8e78-4621-b64d-f912e93cb485" msprop:DbColumnName="MobilityID" msprop:FriendlyName="MobilityID" type="xs:int" />
+                  <xs:element name="DateKey" msprop:design-time-name="bd9089b9-4478-4601-ae72-cb9f263b4260" msprop:DbColumnName="DateKey" msprop:FriendlyName="DateKey" type="xs:int" minOccurs="0" />
+                  <xs:element name="LocationKey" msprop:design-time-name="93f0a05f-80ec-4d29-af6d-8486b097c5f9" msprop:DbColumnName="LocationKey" msprop:FriendlyName="LocationKey" type="xs:int" minOccurs="0" />
+                  <xs:element name="RetailAndRecreationChange" msprop:design-time-name="ab803da0-8981-44c4-9e67-19ce3ea46878" msprop:DbColumnName="RetailAndRecreationChange" msprop:FriendlyName="RetailAndRecreationChange" type="xs:int" minOccurs="0" />
+                  <xs:element name="GroceryAndPharmacyChange" msprop:design-time-name="8acc3515-2948-469f-bc2f-6bebe990d002" msprop:DbColumnName="GroceryAndPharmacyChange" msprop:FriendlyName="GroceryAndPharmacyChange" type="xs:int" minOccurs="0" />
+                  <xs:element name="ParksChange" msprop:design-time-name="17502ccc-5cab-49d7-bc14-c7e5a15258e7" msprop:DbColumnName="ParksChange" msprop:FriendlyName="ParksChange" type="xs:int" minOccurs="0" />
+                  <xs:element name="TransitStationsChange" msprop:design-time-name="df1024eb-c58d-4053-a1b6-6a5372703b26" msprop:DbColumnName="TransitStationsChange" msprop:FriendlyName="TransitStationsChange" type="xs:int" minOccurs="0" />
+                  <xs:element name="WorkplacesChange" msprop:design-time-name="a4af5cb9-8c7a-4952-9312-b5bb040a6c44" msprop:DbColumnName="WorkplacesChange" msprop:FriendlyName="WorkplacesChange" type="xs:int" minOccurs="0" />
+                  <xs:element name="ResidentialChange" msprop:design-time-name="62fc3490-59da-4cff-8e5e-ca9eae6639dd" msprop:DbColumnName="ResidentialChange" msprop:FriendlyName="ResidentialChange" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Date" />
+          <xs:field xpath="DateKey" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Location_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Location" />
+          <xs:field xpath="LocationKey" />
+        </xs:unique>
+        <xs:unique name="dbo_Fact_Mobility_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Fact_Mobility" />
+          <xs:field xpath="MobilityID" />
+        </xs:unique>
+        <xs:keyref name="FK__Fact_Mobi__DateK__5441852A" refer="Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Mobility" />
+          <xs:field xpath="DateKey" />
+        </xs:keyref>
+        <xs:keyref name="FK__Fact_Mobi__Locat__5535A963" refer="dbo_Dim_Location_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Mobility" />
+          <xs:field xpath="LocationKey" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <Covid_x0020_Report xmlns="" />
+  </Schema>
+</DataSourceView>
